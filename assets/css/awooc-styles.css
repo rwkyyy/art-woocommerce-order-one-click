@@ -19,11 +19,11 @@
 .awooc-form-custom-order-img {
     text-align: center;
 }
-
+/*@todo - update style - float does not allow proper aligning/margin/etc.*/
 .awooc-form-custom-order-img img {
     width: 40%;
     height: auto;
-    float: left;
+    /*float: left;*/
     margin-right: 1rem;
 }
 
