@@ -205,12 +205,13 @@ if ( ! function_exists( 'awooc_popup_window_qty' ) ) {
 	 * @param $elements
 	 *
 	 * @since 2.1.0
+     * @todo - need to rework this to be translation compatible, atm doesn't work - modified label
 	 */
 	function awooc_popup_window_qty( $elements ) {
 
 		if ( in_array( 'qty', $elements, true ) ) {
 
-			echo '<div class="awooc-form-custom-order-qty"></div>';
+			echo '<div class="awooc-form-custom-order-qty"></div><br><p>*19% VAT for EU locations</p>';
 
 		}
 
@@ -226,6 +227,7 @@ if ( ! function_exists( 'awooc_popup_window_attr' ) ) {
 	 *
 	 * @since 1.5.0
 	 * @since 1.8.9
+     * @todo - need to make this an option (removed label)
 	 */
 	function awooc_popup_window_attr( $elements ) {
 

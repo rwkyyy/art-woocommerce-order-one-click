@@ -246,8 +246,7 @@ class AWOOC_Ajax {
 		}
 
 		$attr_json = sprintf(
-			'%s</br><span class="awooc-attr-wrapper"><span>%s</span></span>',
-			apply_filters( 'awooc_popup_attr_label', esc_html__( 'Attributes: ', 'art-woocommerce-order-one-click' ) ),
+			'<span class="awooc-attr-wrapper"><span>%s</span></span>',
 			$product_var_attr
 		);
 
@@ -263,7 +262,7 @@ class AWOOC_Ajax {
 	 *
 	 * @return bool|mixed
 	 * @since 1.8.0
-	 *
+	 * @todo - need to rework this to be translation compatible, atm doesn't work - modified label
 	 */
 	public function product_price( $product ) {
 
@@ -275,7 +274,7 @@ class AWOOC_Ajax {
 			'awooc_popup_price_html',
 			sprintf(
 				'%s<span class="awooc-price-wrapper">%s</span></div>',
-				apply_filters( 'awooc_popup_price_label', __( 'Price: ', 'art-woocommerce-order-one-click' ) ),
+				apply_filters( 'awooc_popup_price_label', __( 'Price without VAT*:', 'art-woocommerce-order-one-click' ) ),
 				wc_price( $product->get_price() )
 			),
 			$product
